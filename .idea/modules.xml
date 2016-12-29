@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/GradleProguardDemo.iml" filepath="$PROJECT_DIR$/GradleProguardDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app_lib/app_lib.iml" filepath="$PROJECT_DIR$/app_lib/app_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/makeLibraryJar_demo.iml" filepath="$PROJECT_DIR$/makeLibraryJar_demo.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,50 @@
+apply plugin: 'com.android.library'
+
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.3"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+apply plugin: 'org.gradle.sdkjar.plugin'
+
+JarSetting {
+    //输出目录
+    outputFileDir = project.buildDir.path + "/jar"
+    //输出原始jar包名
+    outputFileName = "gson.jar"
+    //输出混淆jar包名
+    outputProguardFileName = "gson_proguard.jar"
+    //混淆配置
+    proguardConfigFile = "proguard-rules.pro"
+    //需要输出jar的包名列表,当此参数为空时，则默认全项目输出,支持多包,如 includePackage=['com/demo/plugin/include','com/demo/plugin/include1'...]
+    includePackage = []
+    //不需要输出jar的jar包列表,如['baidu.jar','baidu1.jar'...]
+    excludeJar = []
+    //不需要输出jar的类名列表,如['baidu.calss','baidu1.class'...]
+    excludeClass = []
+    //不需要输出jar的包名列表,如 excludePackage=['com/demo/plugin/exclude','com/demo/plugin/exclude1'...]
+    excludePackage = []
+}
+
+
+
+
+

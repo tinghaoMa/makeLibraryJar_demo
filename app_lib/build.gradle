@@ -23,7 +23,7 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
 
-apply plugin: 'org.gradle.sdkjar.plugin'
+apply plugin: 'org.gradle.sdkjar'
 
 JarSetting {
     //输出目录
